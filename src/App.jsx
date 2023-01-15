@@ -3,6 +3,7 @@ import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { solveSpellingBee } from "./services/solver";
 
+// Main app
 function App() {
   const [goldLetter, setGoldLetter] = useState("");
   const [letter2, setLetter2] = useState("");
