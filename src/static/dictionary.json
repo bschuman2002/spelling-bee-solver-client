@@ -1,6 +1,4 @@
-import axios from "axios";
-
-let wordDictionary = [
+[
   "aah",
   "aardvark",
   "aardvarks",
@@ -60388,43 +60386,5 @@ let wordDictionary = [
   "zucchinis",
   "zydeco",
   "zygote",
-  "zygotes",
-];
-
-wordDictionary = wordDictionary.filter((word) => word.length >= 4);
-
-const wordSet = new Set(wordDictionary);
-
-const instance = axios.create({
-  baseURL: import.meta.env.VITE_API_URL + "/api/v1",
-});
-
-export const solveSpellingBee = (goldLetter, letters) => {
-  let resArray = [];
-  const lowerLetters = letters.toLowerCase();
-  const lettersArr = [...lowerLetters];
-  findWords("", goldLetter, lettersArr, resArray);
-  return resArray;
-};
-
-const prefixContains = (prefixStr) => {
-  let found = false;
-  wordSet.forEach((word) => {
-    const loc = word.indexOf(prefixStr);
-    if (loc === 0) found = true;
-  });
-  return found;
-};
-
-const findWords = (word, goldLetter, letters, resArray) => {
-  if (wordSet.has(word) && word.includes(goldLetter)) {
-    resArray.push(word);
-  }
-  if (prefixContains(word)) {
-    letters.forEach((letter) =>
-      findWords(word + letter, goldLetter, letters, resArray)
-    );
-  } else {
-    return;
-  }
-};
+  "zygotes"
+]

@@ -28,15 +28,13 @@ function App() {
     if (letters.length < 7) {
       toast.error("Please input a letter in every box");
     } else {
-      const solvePromise = solveSpellingBee(goldLetter.toLowerCase(), letters);
-      toast.promise(solvePromise, {
-        loading: "Fetching solutions (this might take some time)",
-        success: "Success",
-        error: "Ran into some issue, please try again later",
-      });
+      const words = solveSpellingBee(goldLetter.toLowerCase(), letters);
+      // toast.promise(solvePromise, {
+      //   loading: "Fetching solutions (this might take some time)",
+      //   success: "Success",
+      //   error: "Ran into some issue, please try again later",
+      // });
 
-      const words = await solvePromise;
-      console.log(words);
       setWordsResult(words);
     }
   };
