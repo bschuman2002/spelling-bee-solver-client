@@ -46,11 +46,11 @@ function App() {
       <NavBar />
       <Toaster />
 
-      <div className="rounded-md bg-white flex flex-col mx-auto w-[40rem] mt-10 border border-gray-200 p-5">
+      <div className="rounded-md bg-white flex flex-col mx-auto w-[20rem] lg:w-[40rem] mt-10 border border-gray-200 p-5">
         <h1 className="text-center text-xl text-gray-800 font-semibold">
           Input Today's NYT Spelling Bee Letters:
         </h1>
-        <div className="flex space-x-10 mx-auto mt-5">
+        <div className="flex flex-col lg:flex-row space-y-2 lg:space-x-10 mx-auto mt-5">
           <div className="bg-white h-10 w-10 rounded-lg border-2 border-yellow-400 flex p-2">
             <input
               className="w-3 mx-auto border-none focus:outline-none"
@@ -124,7 +124,7 @@ function App() {
       </div>
 
       {wordsResult?.length > 0 && 
-        <div className="rounded-md bg-white flex flex-col mx-auto w-[40rem] mt-10 border border-gray-200 p-5 max-h-80">
+        <div className="rounded-md bg-white flex flex-col mx-auto w-[20rem] lg:w-[40rem] mb-5 mt-10 border border-gray-200 p-5 max-h-80">
           <h1 className="mb-3 text-gray-800 text-xl font-semibold">Spelling Bee Words:</h1>
           <div className="flex flex-col h-full overflow-scroll scrollbar-hide">{wordsResult.map((word) => <div key={word} className="odd:bg-gray-200 p-1">{word}</div>)}</div>
         </div>}
