@@ -50,7 +50,7 @@ function App() {
         <h1 className="text-center text-xl text-gray-800 font-semibold">
           Input Today's NYT Spelling Bee Letters:
         </h1>
-        <div className="flex flex-col lg:flex-row space-y-2 lg:space-x-10 mx-auto mt-5">
+        <div className="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-10 mx-auto mt-5">
           <div className="bg-white h-10 w-10 rounded-lg border-2 border-yellow-400 flex p-2">
             <input
               className="w-3 mx-auto border-none focus:outline-none"
